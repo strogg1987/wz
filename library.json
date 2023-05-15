@@ -17,9 +17,23 @@
     "dependencies": {},
     "build": {
         "flags": [
-            "-I Application",
+            "-I Application/loopback",
+            "-I Application/multicast",
             "-I Ethernet",
-            "-I Internet"
+            "-I Ethernet/W5100",
+            "-I Ethernet/W5100s",
+            "-I Ethernet/W5200",
+            "-I Ethernet/W5300",
+            "-I Ethernet/w5500",
+            "-I Internet/DNS",
+            "-I Internet/DHCP",
+            "-I Internet/FTPClient",
+            "-I Internet/FTPServer",
+            "-I Internet/httpServer",
+            "-I Internet/MQTT",
+            "-I Internet/SNMP",
+            "-I Internet/SNTP",
+            "-I Internet/TFTP"
         ]
     },
     "frameworks": "libopencm3",

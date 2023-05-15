@@ -25,10 +25,10 @@ void insertRespLen(int32_t reqStart, int32_t respStart, int32_t size);
 int32_t parseVarBind(int32_t reqType, int32_t index);
 int32_t parseSequence(int32_t reqType, int32_t index);
 int32_t parseSequenceOf(int32_t reqType);
-int32_t parseRequest();
-int32_t parseCommunity();
-int32_t parseVersion();
-int32_t parseSNMPMessage();
+int32_t parseRequest(void);
+int32_t parseCommunity(void);
+int32_t parseVersion(void);
+int32_t parseSNMPMessage(void);
 
 // Debugging function
 #ifdef _SNMP_DEBUG_
@@ -726,7 +726,7 @@ void ipToByteArray(int8_t *ip, uint8_t *pDes)
 		if ( buff[i]=='.' )		buff[i] = ' ';
 	}
 
-	sscanf((char const*)buff, "%u %u %u %u", &ip1, &ip2, &ip3, &ip4);
+	sscanf((char const*)buff, "%lu %lu %lu %lu", &ip1, &ip2, &ip3, &ip4);
 	pDes[0] = ip1; pDes[1] = ip2; pDes[2] = ip3; pDes[3] = ip4;
 }
 

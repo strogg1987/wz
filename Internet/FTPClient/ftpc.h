@@ -121,7 +121,7 @@ void ftpc_init(uint8_t * src_ip);
 uint8_t ftpc_run(uint8_t * dbuf);
 char proc_ftpc(char * buf);
 int pportc(char * arg);
-uint8_t* User_Keyboard_MSG();
+uint8_t* User_Keyboard_MSG(void);
 
 #ifdef __cplusplus
 }
