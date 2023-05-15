@@ -174,7 +174,7 @@ int8_t  socket(uint8_t sn, uint8_t protocol, uint16_t port, uint8_t flag);
  * @return @b Success : @ref SOCK_OK \n
  *         @b Fail    : @ref SOCKERR_SOCKNUM - Invalid socket number
  */
-int8_t  close(uint8_t sn);
+int8_t  sock_close(uint8_t sn);
 
 /**
  * @ingroup WIZnet_socket_APIs

@@ -208,7 +208,7 @@ uint8_t ftpd_run(uint8_t * dbuf)
 #if defined(_FTP_DEBUG_)
     				printf("%d:send() error:%ld\r\n",CTRL_SOCK,ret);
 #endif
-    				close(CTRL_SOCK);
+    				sock_close(CTRL_SOCK);
     				return ret;
     			}
     			connect_state_control = 1;
@@ -257,7 +257,7 @@ uint8_t ftpd_run(uint8_t * dbuf)
 #if defined(_FTP_DEBUG_)
     					printf("%d:recv() error:%ld\r\n",CTRL_SOCK,ret);
 #endif
-    					close(CTRL_SOCK);
+    					sock_close(CTRL_SOCK);
     					return ret;
     				}
     			}
@@ -288,7 +288,7 @@ uint8_t ftpd_run(uint8_t * dbuf)
 #if defined(_FTP_DEBUG_)
     			printf("%d:socket() error:%ld\r\n", CTRL_SOCK, ret);
 #endif
-    			close(CTRL_SOCK);
+    			sock_close(CTRL_SOCK);
     			return ret;
     		}
     		break;
@@ -338,7 +338,7 @@ uint8_t ftpd_run(uint8_t * dbuf)
 #if defined(_FTP_DEBUG_)
 					printf("%d:send() error:%ld\r\n",CTRL_SOCK1,ret);
 #endif
-					close(CTRL_SOCK1);
+					sock_close(CTRL_SOCK1);
 					return ret;
 				}
 				connect_state_control1 = 1;
@@ -387,7 +387,7 @@ uint8_t ftpd_run(uint8_t * dbuf)
 #if defined(_FTP_DEBUG_)
 						printf("%d:recv() error:%ld\r\n",CTRL_SOCK1,ret);
 #endif
-						close(CTRL_SOCK1);
+						sock_close(CTRL_SOCK1);
 						return ret;
 					}
 				}
@@ -419,7 +419,7 @@ uint8_t ftpd_run(uint8_t * dbuf)
 #if defined(_FTP_DEBUG_)
 				printf("%d:socket() error:%ld\r\n", CTRL_SOCK1, ret);
 #endif
-				close(CTRL_SOCK1);
+				sock_close(CTRL_SOCK1);
 				return ret;
 			}
 			break;
@@ -699,7 +699,7 @@ uint8_t ftpd_run(uint8_t * dbuf)
 #if defined(_FTP_DEBUG_)
    						printf("%d:socket() error:%ld\r\n", DATA_SOCK, ret);
 #endif
-   						close(DATA_SOCK);
+   						sock_close(DATA_SOCK);
    						return ret;
    					}
 
@@ -715,7 +715,7 @@ uint8_t ftpd_run(uint8_t * dbuf)
 #if defined(_FTP_DEBUG_)
    						printf("%d:socket() error:%ld\r\n", DATA_SOCK, ret);
 #endif
-   						close(DATA_SOCK);
+   						sock_close(DATA_SOCK);
    						return ret;
    					}
    				}
@@ -824,7 +824,7 @@ char proc_ftpd(uint8_t sn, char * buf)
 		#if defined(_FTP_DEBUG_)
 						printf("%d:send() error:%ld\r\n",sn,ret);
 		#endif
-						close(sn);
+						sock_close(sn);
 						return ret;
 					}
 					break;
@@ -842,7 +842,7 @@ char proc_ftpd(uint8_t sn, char * buf)
 #if defined(_FTP_DEBUG_)
 				printf("%d:send() error:%ld\r\n",sn,ret);
 #endif
-				close(sn);
+				sock_close(sn);
 				return ret;
 			}
 			break;
@@ -865,7 +865,7 @@ char proc_ftpd(uint8_t sn, char * buf)
 		#if defined(_FTP_DEBUG_)
 						printf("%d:send() error:%ld\r\n",sn,ret);
 		#endif
-						close(sn);
+						sock_close(sn);
 						return ret;
 					}
 					break;
