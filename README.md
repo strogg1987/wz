@@ -1,6 +1,10 @@
 # wz
 This is the WIZnet ioLibrary with minimal changes to make it work with libopencm3. Formatted as a library for Platformio
 ## usage
+add to platformio.ini
+```
+lib_deps = https://github.com/strogg1987/wz
+```
 Add w5x00 related functions
 ```C
 uint8_t spiReadByte(void)
