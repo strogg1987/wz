@@ -36,6 +36,6 @@
             "-I Internet/TFTP"
         ]
     },
-    "frameworks": "libopencm3",
+    "frameworks": ["libopencm3","stm32cube"],
     "platforms": "stm32"
 }
